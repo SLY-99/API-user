@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>API</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="header__title">Users  API</h2>
+            <hr>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col border-end border-info">
+                    <h3>Users</h3>
+                    <p>Number of users: <span id="users-counter"></span></p>
+                    
+                    <ul id="users-wrapper" class="p-0">
+                    </ul>
+                </div>
+                <div class="col border-end border-info">
+                    <h3>Posts</h3>
+                    <p>Number of posts: <span id="posts-counter"></span></p>
+                    
+                    <ul id="posts-wrapper" class="p-0">
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Comments</h3>
+                    <p>Number of comments: <span id="comments-counter"></span></p>
+                    
+                    <ul id="comments-wrapper" class="p-0">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <template id="users-template">
+        <li class="border border-primary rounded mb-2 ps-2">
+            <a class="link-primary user__link"><h4 id="users-name"></h4></a>
+            <p class="m-0"><b>Email: </b><a id="users-email" class="link-primary user__link"></a></p>
+            <p class="m-0"><b>Country: </b><span id="users-country"></span></p>
+            <p class="m-0"><b>Company: </b><span id="users-company"></span></p>
+            <p class="m-0"><b>Website: </b><a id="users-website" class="link-primary user__link"></a></p>
+        </li>
+    </template>
+    <template id="posts-template">
+        <li class="border border-primary rounded mb-2 ps-2">
+            <a class="link-primary posts__link"><h4 id="posts-title"></h4></a>
+            <p class="m-0"><b>Posts: </b><span id="posts-text"></span></p>
+        </li>
+    </template>
+    <template id="comments-template">
+        <li class="border border-primary rounded mb-2 ps-2">
+            <h4 class="m-0">Title: <span id="comments-title"></span></h4>
+            <p class="m-0"><b>Email: </b><a id="comments-email" class="link-primary comments__link"></a></p>
+            <p class="m-0"><b>Comments: </b><span id="comments-text"></span></p>
+        </li>
+    </template>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
